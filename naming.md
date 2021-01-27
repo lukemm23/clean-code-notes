@@ -6,19 +6,19 @@
 
 ### example 1
 
-// bad code
-const us = new MainEntity();
-us.process();
-if(login){
+    // bad code
+    const us = new MainEntity();
+    us.process();
+    if(login){
 
-}
+    }
 
-// good code
-const user = new User();
-user.save();
-if(isLoggedIn){
+    // good code
+    const user = new User();
+    user.save();
+    if(isLoggedIn){
 
-}
+    }
 
 ### how to name things correctly
 
@@ -55,3 +55,27 @@ html
 
 - function performs an operation - describe the operation, or provide more details without redundancy ie. getUser(), response.send(), getUserByEmail()
 - function computes a boolean - answer a true/false question, or provide more details without redundancy ie. isValid(), purchase.isPaid(), emailIsValid()
+
+### naming classes
+
+- describe the object, or provide more details without redundancy ie. User Product, Customer Course
+
+### exceptions
+
+    class Database {
+
+      private client: any;
+
+      get connectedClient(){
+        if(!this.client){
+          throw new Error('Database not connected!');
+        }
+        return this.client;
+      }
+
+      connect(){
+        // estabilishing connection...
+        this.client = {};
+      }
+
+    }
