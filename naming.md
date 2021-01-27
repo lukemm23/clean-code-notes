@@ -79,3 +79,31 @@ html
       }
 
     }
+
+- get connectedClient() is a getter method, yet it sounds more like a property name, this is an exception yet an acceptable naming method.
+
+### common error and pitfalls
+
+    // bad name (redundancy)
+    userWithNameAndAge = User('luke', 34)
+    // name is too long with redundant information.
+
+    // good name
+    user = User('luke', 34), newUser = User('luke', 34), loggedInUser = User('luke', 34)
+    // avoids redundancy and gives more context of what the data.
+
+    // bad name (slang)
+    product.diePlease()
+    user.facepalm()
+    message(n)
+    ymdt = '20210121cet'
+    userList = {u1:..., u2:...}
+    allAccounts = accounts.filter()
+
+    // good name
+    product.remove()
+    user.sendErrorMessage()
+    message(newUser)
+    dateWithTimezone = '20210121cet'
+    userMap = {u1:..., u2:...}
+    filteredAccounts = accounts.filter()
