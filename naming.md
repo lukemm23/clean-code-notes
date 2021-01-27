@@ -3,6 +3,7 @@
 ### why names matter
 
 1. names should be meaningful to its context
+2. be consistent throughtout project, ie getUsers(), fetchProducts() is inconsistent.
 
 ### example 1
 
@@ -107,3 +108,15 @@ html
     dateWithTimezone = '20210121cet'
     userMap = {u1:..., u2:...}
     filteredAccounts = accounts.filter()
+
+    // bad name (undistinctive)
+    analytics.getDailyData(day)
+    analytics.getDayData()
+    analytics.getRawDailyData(day)
+    analytics.getParsedDailyData(day)
+
+     // good name
+     analytics.getDailyReport(day)
+     analytics.getDataForToday()
+     analytics.getRawDailyData(day)
+     analytics.getParsedDailyData(day)
